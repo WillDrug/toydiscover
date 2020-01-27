@@ -19,6 +19,7 @@ class ToyDiscoverReporter:
             return True
         except requests.exceptions.ConnectionError as e:
             # fixme: logging
+            print('Hello, I am a thread and I has an error: ', e.__class__, ': ', e.__str__())
             return False
 
     def ioloop(self):
