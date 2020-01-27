@@ -19,7 +19,7 @@ class ToyDiscoverReporter:
                                                                                    'description': self.description}})
             return True
         except requests.exceptions.ConnectionError as e:
-            # fixme: logging
+            print(f'I am a console output debug line. Kill me. {e.__class__} : {e.__str__()}')
             return False
 
     def ioloop(self):
